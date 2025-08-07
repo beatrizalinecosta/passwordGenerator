@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home darkMode={darkMode} toggleDark={() => setDarkMode(!darkMode)} />} />
+        <Route path="/passwordGenerator" element={<Home darkMode={darkMode} toggleDark={() => setDarkMode(!darkMode)} />} />
         <Route path="/gerador" element={<Generator darkMode={darkMode} toggleDark={() => setDarkMode(!darkMode)} />} />
       </Routes>
     </Router>
