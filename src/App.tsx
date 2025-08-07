@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Generator from './pages/Generator';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true';
+  });
+
+  useEffect(() => {
+    document.body.className = darkMode ? 'bg-dark text-white' : 'bg-light text-dark';
+    localStorage.setItem('darkMode', String(darkMode));
+  }, [darkMode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home darkMode={darkMode} toggleDark={() => setDarkMode(!darkMode)} />} />
+        <Route path="/gerador" element={<Generator darkMode={darkMode} toggleDark={() => setDarkMode(!darkMode)} />} />
+      </Routes>
+    </Router>
   );
 }
 
