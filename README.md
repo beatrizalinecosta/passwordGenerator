@@ -1,6 +1,6 @@
 # Password Generator
 
->Aplicativo React + TypeScript que gera senhas aleatórias para o usuário. Com opções em checkbox, o usuário pode selecionar se quer letras maísculas e minusculas, caracteres especiais e números. O aplicativo também guarda as últimas 5 senhas geradas e possui a opção de Modo Escuro.
+>Aplicativo React + TypeScript que gera senhas aleatórias para o usuário. Com opções em checkbox, o usuário pode selecionar se quer letras maiúsculas e minúsculas, caracteres especiais e números. O aplicativo também guarda as últimas 5 senhas geradas e possui a opção de Modo Escuro.
 - [Demo](https://beatrizalinecosta.github.io/passwordGenarator/)
 
 ### 💻 Built With
